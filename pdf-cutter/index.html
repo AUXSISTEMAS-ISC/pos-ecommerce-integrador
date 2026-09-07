@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cortador de Tirillas PDF</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Carga de Librerías desde CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+  <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Cortador & Unidor de PDFs</h1>
+    <div class="controls">
+      <input type="file" id="file-input" accept="application/pdf" />
+      <button id="btn-process" disabled>Procesar y Descargar Carta</button>
+      <button id="btn-reset" disabled>Limpiar Cortes</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="instruction-bar">Carga un archivo PDF para empezar.</div>
+    
+    <!-- Contenedor donde se dibuja el PDF y los cortes -->
+    <div id="pdf-wrapper">
+      <canvas id="pdf-canvas"></canvas>
+      <div id="overlay"></div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
